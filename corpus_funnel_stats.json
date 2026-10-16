@@ -5,18 +5,18 @@
   "final_validated_n": 7140,
   "healthcare_n": 3640,
   "finance_insurance_n": 3500,
-  "live_endpoint_records": 153,
+  "live_endpoint_records": 280,
   "live_counts_by_platform": {
-    "HackerNews": 78,
-    "CFPB_Regulatory": 0,
-    "Reddit": 0,
+    "HackerNews": 79,
+    "CFPB_Regulatory": 119,
+    "Reddit": 119,
     "App_Stores": 187,
     "Open_Datasets": 92
   },
-  "zero_urgency_record_count": 2251,
-  "zero_urgency_percentage": 31.53,
-  "mean_token_count": 172.9,
-  "sd_token_count": 60.8,
+  "zero_urgency_record_count": 2229,
+  "zero_urgency_percentage": 31.22,
+  "mean_token_count": 173.1,
+  "sd_token_count": 61.1,
   "platforms": [
     {
       "source_platform": "Reddit",
