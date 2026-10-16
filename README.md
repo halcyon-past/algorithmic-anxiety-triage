@@ -66,11 +66,15 @@ algorithmic-anxiety-triage/
 ├── corpus_metadata.csv                 # Analyzed corpus (N = 7,140 verified records)
 ├── corpus_funnel_stats.json            # Four-stage ingestion funnel statistics
 ├── statistical_results.json            # Exact analytical outputs for Tables I-IV
+├── raw_model_predictions_n400.json     # Empirical model predictions on n=400 validation corpus
+├── llama_predictions_n400.json         # Raw Meta Llama 3.2 1B predictions (local Ollama)
+├── qwen_predictions_n400.json          # Raw Alibaba Qwen 2.5 1.5B CoT predictions (local Ollama)
+├── build_verified_results.py           # Verification script compiling empirical model metrics
 │
 ├── scrape_and_curate.py                # Live scraping, PII scrubbing & MinHash deduplication
 ├── analyze_and_plot.py                 # Statistical testing, survival modeling & figure generator
 │
-├── fig1_data_pipeline_architecture.pdf # Fig 1: Ingestion funnel & Dual-LLM architecture (Vector)
+├── fig1_data_pipeline_architecture.pdf # Fig 1: Ingestion funnel & Multi-Model architecture (Vector)
 ├── fig1_data_pipeline_architecture.png # Fig 1: High-resolution PNG
 ├── fig2_taxonomy_distribution.pdf      # Fig 2: Cross-domain failure mode prevalence (Vector)
 ├── fig2_taxonomy_distribution.png      # Fig 2: High-resolution PNG
@@ -89,6 +93,7 @@ algorithmic-anxiety-triage/
 ### Prerequisites
 - Python 3.10, 3.11, or 3.12
 - Recommended: Conda or Python `venv`
+- Local LLM inference: [Ollama](https://ollama.com/) with `llama3.2:1b` and `qwen2.5:1.5b`
 
 ### Environment Setup
 ```bash
@@ -207,11 +212,11 @@ Evaluated across the Author's ground-truth validation sample ($n = 400$):
 - **Krippendorff's Alpha ($\alpha$):**
   $$\alpha = 1 - \frac{D_o}{D_e}$$
 
-| Qualitative Coding Pipeline / Model | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
+| Qualitative Coding Architecture / Model | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| OpenAI GPT-4o (Zero-Shot Baseline) | 0.695 | 0.726 | 0.704 | 0.674 | 0.668 |
-| OpenAI GPT-4o (Few-Shot CoT) | 0.788 | 0.829 | 0.799 | 0.773 | 0.768 |
-| **GPT-4o + Claude 3.5 Sonnet Ensemble** | **0.859** | **0.868** | **0.862** | **0.842** | **0.836** |
+| Meta Llama 3.2 1B (Local Zero-Shot) | 0.461 | 0.285 | 0.219 | 0.183 | 0.129 |
+| Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT) | 0.488 | 0.413 | 0.356 | 0.329 | 0.304 |
+| **Multi-Model Consensus Ensemble** | **0.488** | **0.413** | **0.356** | **0.329** | **0.212** |
 | Author Ground Truth (Test-Retest Stability) | 0.904 | 0.912 | 0.906 | 0.894 | 0.888 |
 
 ---
@@ -259,9 +264,9 @@ jupyter notebook replication_analysis.ipynb
 
 ---
 
-## 7. Dual-LLM Qualitative Prompt Templates
+## 7. Multi-Model Qualitative Prompt Templates
 
-### Primary Thematic Coding Prompt
+### Primary Thematic Coding Prompt (Meta Llama 3.2 1B Zero-Shot & Alibaba Qwen 2.5 1.5B Few-Shot CoT)
 ```json
 {
   "system_prompt": "You are a Senior HCI and Clinical Safety Computational Social Science Researcher specializing in automated conversational triage failure modes. You will analyze an unstructured consumer grievance post and classify it into exactly one primary taxonomy category.",
@@ -289,11 +294,11 @@ jupyter notebook replication_analysis.ipynb
 ```
 
 ### Inductive-Deductive Arbitration Schema
-When Model 1 and Model 2 disagree, an arbitration pass is invoked:
+When Meta Llama 3.2 1B and Alibaba Qwen 2.5 1.5B disagree, confidence-weighted arbitration is performed:
 ```text
 Given Narrative: "{narrative_text}"
-Model A Tag: {model_a_tag} (Rationale: {model_a_rationale})
-Model B Tag: {model_b_tag} (Rationale: {model_b_rationale})
+Llama 3.2 1B Prediction: {llama_tag} (Confidence: {llama_confidence}, Rationale: {llama_rationale})
+Qwen 2.5 1.5B Prediction: {qwen_tag} (Confidence: {qwen_confidence}, Rationale: {qwen_rationale})
 
 Evaluate whether the narrative describes:
 (1) An established failure mode from the baseline codebook, OR
@@ -312,7 +317,7 @@ All figures conform to IEEE Transactions layout standards (300 DPI, TrueType/Typ
 | **Fig. 1** | Ingestion pipeline architecture and four-stage filtering funnel. |
 | **Fig. 2** | Cross-domain taxonomy prevalence comparison with Bonferroni-adjusted $\chi^2$ significance markers. |
 | **Fig. 3** | Turn-by-turn Kaplan-Meier survival curves with Greenwood 95% confidence bands across UI architectures. |
-| **Fig. 4** | Normalized confusion matrix heatmap comparing GPT-4o + Claude 3.5 Sonnet predictions against the Author's ground-truth annotation. |
+| **Fig. 4** | Normalized confusion matrix heatmap comparing Multi-Model Consensus (Llama 3.2 1B + Qwen 2.5 1.5B) predictions against the Author's ground-truth annotation. |
 | **Fig. 5** | Multivariate distribution of Algorithmic Anxiety: (a) AAI density violin plots; (b) Bivariate KDE of sentiment valence vs. lexical urgency density. |
 
 ---

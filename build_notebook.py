@@ -48,7 +48,7 @@ This computational notebook provides end-to-end reproducibility for the empirica
 2. **Lexical Urgency Density ($U_{\\text{dens}}$):** Verification of the discrete 42-keyword urgency metric and zero-urgency point mass ($31.30\\%$).
 3. **Algorithmic Anxiety Index (AAI):** Component formulation, Principal Component Analysis (PCA) weight derivation, and distribution metrics.
 4. **Trust Breakdown Taxonomy & Chi-Square Analysis (Table II):** Cross-domain prevalence, Yates' continuity-corrected $\\chi^2_{\\text{Yates}}$, Cramér's $V$, and domain-specific asymmetries.
-5. **Qualitative Coding Reliability & Ablation (Table III):** Multi-model consensus agreement (OpenAI GPT-4o + Anthropic Claude 3.5 Sonnet) against the Author's ground-truth annotation (Cohen's $\\kappa = 0.842$, Krippendorff's $\\alpha = 0.836$).
+5. **Qualitative Coding Reliability & Ablation (Table III):** Multi-model consensus agreement (Meta Llama 3.2 1B + Alibaba Qwen 2.5 1.5B) against the Author's ground-truth annotation (Cohen's $\\kappa = 0.329$, Krippendorff's $\\alpha = 0.212$, concurrence accuracy $62.8\\%$).
 6. **Conversational Survival Dynamics & Cox Regression (Table IV):** Turn-by-turn Kaplan-Meier survival curves, Greenwood confidence intervals, and Cox Proportional Hazards regression.
 7. **Publication Figures (Figs. 1–5):** Programmatic generation and inline rendering of all manuscript figures.
 """))
@@ -411,17 +411,17 @@ display(table_2_df)
 cells.append(nbf.v4.new_markdown_cell(r"""## 5. Qualitative Coding Reliability & Model Ablation Study (Table III)
 
 To validate the multi-model qualitative coding pipeline, we conduct an ablation and reliability assessment on a random validation subsample ($n = 400$) audited against the Author's ground truth:
-1. **OpenAI GPT-4o (Zero-Shot Baseline)**
-2. **OpenAI GPT-4o (Few-Shot CoT)**
-3. **GPT-4o + Claude 3.5 Sonnet Ensemble** (with Meta Llama 3.3 70B Arbitration)
+1. **Meta Llama 3.2 1B (Local Zero-Shot Baseline)**
+2. **Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT)**
+3. **Multi-Model Consensus Ensemble (Llama 3.2 1B + Qwen 2.5 1.5B)**
 4. **Author Ground Truth** (Blinded Test-Retest Stability Baseline)
 
 We compute:
 - Multi-class Macro Precision, Recall, and Macro-F1
-- **Cohen's Kappa ($\\kappa$):**
-  $$\\kappa = \\frac{P_o - P_e}{1 - P_e}$$
-- **Krippendorff's Alpha ($\\alpha$):**
-  $$\\alpha = 1 - \\frac{D_o}{D_e}$$
+- **Cohen's Kappa ($\kappa$):**
+  $$\kappa = \frac{P_o - P_e}{1 - P_e}$$
+- **Krippendorff's Alpha ($\alpha$):**
+  $$\alpha = 1 - \frac{D_o}{D_e}$$
 """))
 
 cells.append(nbf.v4.new_code_cell("""# =============================================================================
@@ -478,36 +478,36 @@ irr = stats_json["inter_rater_reliability"]
 
 table_3_rows = [
     {
-        "Qualitative Coding Pipeline / Model": "OpenAI GPT-4o (Zero-Shot Baseline)",
-        "Prec.": f"{irr['zeroshot_llm']['precision']:.3f}",
-        "Rec.": f"{irr['zeroshot_llm']['recall']:.3f}",
-        "F1": f"{irr['zeroshot_llm']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['zeroshot_llm']['kappa']:.3f}",
-        "\u03b1": f"{irr['zeroshot_llm']['alpha']:.3f}"
+        "Qualitative Coding Pipeline / Model": "Meta Llama 3.2 1B (Local Zero-Shot)",
+        "Prec.": f"{irr['zeroshot_llama']['precision']:.3f}",
+        "Rec.": f"{irr['zeroshot_llama']['recall']:.3f}",
+        "F1": f"{irr['zeroshot_llama']['macro_f1']:.3f}",
+        "\u03ba": f"{irr['zeroshot_llama']['kappa']:.3f}",
+        "\u03b1": f"{irr['zeroshot_llama']['alpha']:.3f}"
     },
     {
-        "Qualitative Coding Pipeline / Model": "OpenAI GPT-4o (Few-Shot CoT)",
-        "Prec.": f"{irr['cot_llm']['precision']:.3f}",
-        "Rec.": f"{irr['cot_llm']['recall']:.3f}",
-        "F1": f"{irr['cot_llm']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['cot_llm']['kappa']:.3f}",
-        "\u03b1": f"{irr['cot_llm']['alpha']:.3f}"
+        "Qualitative Coding Pipeline / Model": "Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT)",
+        "Prec.": f"{irr['fewshot_qwen']['precision']:.3f}",
+        "Rec.": f"{irr['fewshot_qwen']['recall']:.3f}",
+        "F1": f"{irr['fewshot_qwen']['macro_f1']:.3f}",
+        "\u03ba": f"{irr['fewshot_qwen']['kappa']:.3f}",
+        "\u03b1": f"{irr['fewshot_qwen']['alpha']:.3f}"
     },
     {
-        "Qualitative Coding Pipeline / Model": "GPT-4o + Claude 3.5 Sonnet Ensemble",
-        "Prec.": f"{irr['dual_llm_ensemble']['precision']:.3f}",
-        "Rec.": f"{irr['dual_llm_ensemble']['recall']:.3f}",
-        "F1": f"{irr['dual_llm_ensemble']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['dual_llm_ensemble']['kappa']:.3f}",
-        "\u03b1": f"{irr['dual_llm_ensemble']['alpha']:.3f}"
+        "Qualitative Coding Pipeline / Model": "Llama 3.2 1B + Qwen 2.5 1.5B Consensus Ensemble",
+        "Prec.": f"{irr['consensus_ensemble']['precision']:.3f}",
+        "Rec.": f"{irr['consensus_ensemble']['recall']:.3f}",
+        "F1": f"{irr['consensus_ensemble']['macro_f1']:.3f}",
+        "\u03ba": f"{irr['consensus_ensemble']['kappa']:.3f}",
+        "\u03b1": f"{irr['consensus_ensemble']['alpha']:.3f}"
     },
     {
         "Qualitative Coding Pipeline / Model": "Author Ground Truth (Test-Retest Stability)",
-        "Prec.": f"{irr['human_expert_consensus']['precision']:.3f}",
-        "Rec.": f"{irr['human_expert_consensus']['recall']:.3f}",
-        "F1": f"{irr['human_expert_consensus']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['human_expert_consensus']['kappa']:.3f}",
-        "\u03b1": f"{irr['human_expert_consensus']['alpha']:.3f}"
+        "Prec.": f"{irr['author_ground_truth']['precision']:.3f}",
+        "Rec.": f"{irr['author_ground_truth']['recall']:.3f}",
+        "F1": f"{irr['author_ground_truth']['macro_f1']:.3f}",
+        "\u03ba": f"{irr['author_ground_truth']['kappa']:.3f}",
+        "\u03b1": f"{irr['author_ground_truth']['alpha']:.3f}"
     }
 ]
 
@@ -663,7 +663,7 @@ All statistical calculations, mathematical formulas, and table entries presented
 1. **Arithmetic Consistency:** Curation Funnel totals ($11,720 \\to 9,970 \\to 7,630 \\to 7,140$) and token length statistics match Table I exactly.
 2. **Discrete Urgency Realism:** Exactly $2,235$ records ($31.30\\%$) sit at $U_{\\text{dens}} = 0.0$, reproducing authentic zero-urgency distributions.
 3. **Statistical Significance:** Cross-domain contingency tests ($\chi^2 = 206.62$, $p < 0.001$, Cramér's $V = 0.170$) validate domain-specific failure modalities.
-4. **Inter-Model Consensus:** Multi-model ensemble (OpenAI GPT-4o + Anthropic Claude 3.5 Sonnet) achieves $\\kappa = 0.842$ and $\\alpha = 0.836$ against the Author's ground truth (test-retest stability: $\\kappa = 0.894$, $\\alpha = 0.888$).
+4. **Inter-Model Consensus:** Multi-model ensemble (Meta Llama 3.2 1B + Alibaba Qwen 2.5 1.5B) achieves $\\kappa = 0.329$ and $\\alpha = 0.212$ with $62.8\\%$ agreement accuracy against the Author's ground truth (test-retest stability: $\\kappa = 0.894$, $\\alpha = 0.888$).
 5. **Survival Hazard Ratios:** Rule-Tree $\\text{HR} = 2.84$ ($p < 0.001$) and LLM Agent $\\text{HR} = 1.96$ ($p < 0.001$) match Table IV projections.
 """))
 
