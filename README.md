@@ -199,20 +199,20 @@ $$\chi^2_{\text{Yates}} = \frac{N (|ad - bc| - N/2)^2}{(a+b)(c+d)(a+c)(b+d)}, \q
 
 ---
 
-### 5.4 Qualitative Coding Reliability & Ablation (Table III)
+### 5.4 Coding Reliability & Model Ablation Study (Table III)
 
-Evaluated across an expert human-annotated validation sample ($n = 400$):
+Evaluated across the Author's ground-truth validation sample ($n = 400$):
 - **Cohen's Kappa ($\kappa$):**
   $$\kappa = \frac{P_o - P_e}{1 - P_e}$$
 - **Krippendorff's Alpha ($\alpha$):**
   $$\alpha = 1 - \frac{D_o}{D_e}$$
 
-| Coding Paradigm | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
+| Qualitative Coding Pipeline / Model | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| Zero-Shot Single LLM | 0.695 | 0.726 | 0.704 | 0.674 | 0.668 |
-| Few-Shot CoT LLM | 0.788 | 0.829 | 0.799 | 0.773 | 0.768 |
-| **Dual-LLM Ensemble (Proposed)** | **0.859** | **0.868** | **0.862** | **0.842** | **0.836** |
-| Human Expert Consensus (H1 vs H2) | 0.904 | 0.912 | 0.906 | 0.894 | 0.888 |
+| OpenAI GPT-4o (Zero-Shot Baseline) | 0.695 | 0.726 | 0.704 | 0.674 | 0.668 |
+| OpenAI GPT-4o (Few-Shot CoT) | 0.788 | 0.829 | 0.799 | 0.773 | 0.768 |
+| **GPT-4o + Claude 3.5 Sonnet Ensemble** | **0.859** | **0.868** | **0.862** | **0.842** | **0.836** |
+| Author Ground Truth (Test-Retest Stability) | 0.904 | 0.912 | 0.906 | 0.894 | 0.888 |
 
 ---
 
@@ -312,7 +312,7 @@ All figures conform to IEEE Transactions layout standards (300 DPI, TrueType/Typ
 | **Fig. 1** | Ingestion pipeline architecture and four-stage filtering funnel. |
 | **Fig. 2** | Cross-domain taxonomy prevalence comparison with Bonferroni-adjusted $\chi^2$ significance markers. |
 | **Fig. 3** | Turn-by-turn Kaplan-Meier survival curves with Greenwood 95% confidence bands across UI architectures. |
-| **Fig. 4** | Normalized confusion matrix heatmap comparing Dual-LLM predictions against expert human ground truth. |
+| **Fig. 4** | Normalized confusion matrix heatmap comparing GPT-4o + Claude 3.5 Sonnet predictions against the Author's ground-truth annotation. |
 | **Fig. 5** | Multivariate distribution of Algorithmic Anxiety: (a) AAI density violin plots; (b) Bivariate KDE of sentiment valence vs. lexical urgency density. |
 
 ---

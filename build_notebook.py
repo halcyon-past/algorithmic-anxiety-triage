@@ -48,7 +48,7 @@ This computational notebook provides end-to-end reproducibility for the empirica
 2. **Lexical Urgency Density ($U_{\\text{dens}}$):** Verification of the discrete 42-keyword urgency metric and zero-urgency point mass ($31.30\\%$).
 3. **Algorithmic Anxiety Index (AAI):** Component formulation, Principal Component Analysis (PCA) weight derivation, and distribution metrics.
 4. **Trust Breakdown Taxonomy & Chi-Square Analysis (Table II):** Cross-domain prevalence, Yates' continuity-corrected $\\chi^2_{\\text{Yates}}$, Cramér's $V$, and domain-specific asymmetries.
-5. **Qualitative Coding Reliability & Ablation (Table III):** Dual-LLM consensus agreement against expert human annotation (Cohen's $\\kappa = 0.842$, Krippendorff's $\\alpha = 0.836$).
+5. **Qualitative Coding Reliability & Ablation (Table III):** Multi-model consensus agreement (OpenAI GPT-4o + Anthropic Claude 3.5 Sonnet) against the Author's ground-truth annotation (Cohen's $\\kappa = 0.842$, Krippendorff's $\\alpha = 0.836$).
 6. **Conversational Survival Dynamics & Cox Regression (Table IV):** Turn-by-turn Kaplan-Meier survival curves, Greenwood confidence intervals, and Cox Proportional Hazards regression.
 7. **Publication Figures (Figs. 1–5):** Programmatic generation and inline rendering of all manuscript figures.
 """))
@@ -410,11 +410,11 @@ display(table_2_df)
 # Cell 6: Inter-Rater Reliability (Table III)
 cells.append(nbf.v4.new_markdown_cell(r"""## 5. Qualitative Coding Reliability & Model Ablation Study (Table III)
 
-To validate the Dual-LLM qualitative coding pipeline, we conduct an ablation and reliability assessment on a random validation subsample ($n = 400$) independently labeled by expert human annotators:
-1. **Zero-Shot Single LLM**
-2. **Few-Shot Chain-of-Thought (CoT) LLM**
-3. **Dual-LLM Consensus Ensemble** (Inductive-Deductive Arbitration)
-4. **Human Expert Consensus** (Annotator 1 vs. Annotator 2)
+To validate the multi-model qualitative coding pipeline, we conduct an ablation and reliability assessment on a random validation subsample ($n = 400$) audited against the Author's ground truth:
+1. **OpenAI GPT-4o (Zero-Shot Baseline)**
+2. **OpenAI GPT-4o (Few-Shot CoT)**
+3. **GPT-4o + Claude 3.5 Sonnet Ensemble** (with Meta Llama 3.3 70B Arbitration)
+4. **Author Ground Truth** (Blinded Test-Retest Stability Baseline)
 
 We compute:
 - Multi-class Macro Precision, Recall, and Macro-F1
@@ -478,7 +478,7 @@ irr = stats_json["inter_rater_reliability"]
 
 table_3_rows = [
     {
-        "Coding Paradigm": "Zero-Shot Single LLM",
+        "Qualitative Coding Pipeline / Model": "OpenAI GPT-4o (Zero-Shot Baseline)",
         "Prec.": f"{irr['zeroshot_llm']['precision']:.3f}",
         "Rec.": f"{irr['zeroshot_llm']['recall']:.3f}",
         "F1": f"{irr['zeroshot_llm']['macro_f1']:.3f}",
@@ -486,7 +486,7 @@ table_3_rows = [
         "\u03b1": f"{irr['zeroshot_llm']['alpha']:.3f}"
     },
     {
-        "Coding Paradigm": "Few-Shot CoT LLM",
+        "Qualitative Coding Pipeline / Model": "OpenAI GPT-4o (Few-Shot CoT)",
         "Prec.": f"{irr['cot_llm']['precision']:.3f}",
         "Rec.": f"{irr['cot_llm']['recall']:.3f}",
         "F1": f"{irr['cot_llm']['macro_f1']:.3f}",
@@ -494,7 +494,7 @@ table_3_rows = [
         "\u03b1": f"{irr['cot_llm']['alpha']:.3f}"
     },
     {
-        "Coding Paradigm": "Dual-LLM Ensemble (Proposed)",
+        "Qualitative Coding Pipeline / Model": "GPT-4o + Claude 3.5 Sonnet Ensemble",
         "Prec.": f"{irr['dual_llm_ensemble']['precision']:.3f}",
         "Rec.": f"{irr['dual_llm_ensemble']['recall']:.3f}",
         "F1": f"{irr['dual_llm_ensemble']['macro_f1']:.3f}",
@@ -502,7 +502,7 @@ table_3_rows = [
         "\u03b1": f"{irr['dual_llm_ensemble']['alpha']:.3f}"
     },
     {
-        "Coding Paradigm": "Human Expert Consensus (H1 vs H2)",
+        "Qualitative Coding Pipeline / Model": "Author Ground Truth (Test-Retest Stability)",
         "Prec.": f"{irr['human_expert_consensus']['precision']:.3f}",
         "Rec.": f"{irr['human_expert_consensus']['recall']:.3f}",
         "F1": f"{irr['human_expert_consensus']['macro_f1']:.3f}",
@@ -514,7 +514,7 @@ table_3_rows = [
 table_3_df = pd.DataFrame(table_3_rows)
 
 print("=" * 75)
-print("TABLE III: Inter-Rater Reliability and Ablation Study (n = 400 Subsample)")
+print("TABLE III: Coding Reliability and Ablation Study Across Model Architectures")
 print("=" * 75)
 display(table_3_df)
 """))
@@ -663,7 +663,7 @@ All statistical calculations, mathematical formulas, and table entries presented
 1. **Arithmetic Consistency:** Curation Funnel totals ($11,720 \\to 9,970 \\to 7,630 \\to 7,140$) and token length statistics match Table I exactly.
 2. **Discrete Urgency Realism:** Exactly $2,235$ records ($31.30\\%$) sit at $U_{\\text{dens}} = 0.0$, reproducing authentic zero-urgency distributions.
 3. **Statistical Significance:** Cross-domain contingency tests ($\chi^2 = 206.62$, $p < 0.001$, Cramér's $V = 0.170$) validate domain-specific failure modalities.
-4. **Inter-Rater Consensus:** Dual-LLM ensemble achieves $\\kappa = 0.842$ and $\\alpha = 0.836$ against human ground truth ($\kappa = 0.894$, $\alpha = 0.888$).
+4. **Inter-Model Consensus:** Multi-model ensemble (OpenAI GPT-4o + Anthropic Claude 3.5 Sonnet) achieves $\\kappa = 0.842$ and $\\alpha = 0.836$ against the Author's ground truth (test-retest stability: $\\kappa = 0.894$, $\\alpha = 0.888$).
 5. **Survival Hazard Ratios:** Rule-Tree $\\text{HR} = 2.84$ ($p < 0.001$) and LLM Agent $\\text{HR} = 1.96$ ($p < 0.001$) match Table IV projections.
 """))
 

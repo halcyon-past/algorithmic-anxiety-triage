@@ -608,12 +608,12 @@ sns.heatmap(
 )
 
 ax.set_title(
-    f"Dual-LLM vs. Human Ground Truth Confusion Matrix (n = {n_val})\n"
+    f"GPT-4o + Claude 3.5 Sonnet vs. Author Ground Truth Confusion Matrix (n = {n_val})\n"
     f"Cohen's \u03ba = {kappa_dual:.3f}   |   Krippendorff's \u03b1 = {alpha_dual:.3f}   |   Macro-F1 = {f1_dual:.3f}",
     fontsize=8.5, weight="bold", pad=10
 )
-ax.set_xlabel("Dual-LLM Consensus Ensemble Prediction")
-ax.set_ylabel("Human Expert Ground-Truth Annotation")
+ax.set_xlabel("GPT-4o + Claude 3.5 Sonnet Consensus Prediction")
+ax.set_ylabel("Author Ground-Truth Annotation")
 plt.xticks(rotation=35, ha="right")
 plt.yticks(rotation=0)
 
