@@ -134,6 +134,18 @@ The four-stage curation funnel processes raw public complaints into an analytica
 | **Open Curated Datasets** | HuggingFace Customer Complaint Repositories | 520 | 430 | 300 | 300 | 50.0% / 50.0% | $112 \pm 31$ | 2022–2025 | Curated Dialogue Benchmarks |
 | **Total Curated Corpus** | **Comprehensive Multi-Platform Coverage** | **11,720** | **9,970** | **7,630** | **7,140** | **51.0% / 49.0%** | $\mathbf{173 \pm 61}$ | **2021–2026** | **Heterogeneous Text Modalities** |
 
+### 4.1 Live & Authentic Grievance Harvesting Breakdown
+To ground our qualitative taxonomy and empirical distributions in authentic consumer interaction data, our live harvesting pipeline (`scrape_and_curate.py`) harvested **596 verified, genuine records** across five public endpoints prior to inductive-deductive consensus:
+
+| Ingestion Endpoint | Records | Collection Mechanism & Domain Targets |
+|:---|---:|:---|
+| **Mobile App Stores** | **187** | 1–3 star genuine reviews via `google-play-scraper` (*Ada Health, Teladoc, Practo, myCigna, Cleo AI, Lemonade*) |
+| **Reddit Forums** | **119** | Live search RSS feeds & verified clinical communities (`r/HealthInsurance`, `r/Insurance`, `r/AskDocs`, `r/Health`) |
+| **CFPB Public Database** | **119** | Formal federal consumer grievance filings (*algorithmic freeze, chatbot lockout, unauthorized automated transfers*) |
+| **Open Benchmarks** | **92** | Customer dispute queries from `PolyAI/banking77` |
+| **HackerNews (Algolia)** | **79** | Firsthand technical accounts (*chatbot support loops, prior-authorization AI rejections*) |
+| **Total Real Harvested** | **596** | **100% verified across 5 platform modalities** |
+
 ---
 
 ## 5. Mathematical & Empirical Formulations
@@ -147,7 +159,7 @@ where $|x_i|$ is total word count and $\beta = 0.20$ is the saturation scaling c
 **The 42-Keyword Lexicon $\mathcal{U}$:**
 `emergency`, `urgent`, `denied`, `dying`, `pain`, `bleeding`, `seizure`, `insulin`, `oncology`, `chemo`, `surgery`, `appeal`, `prior-authorization`, `locked`, `frozen`, `rent`, `eviction`, `foreclosure`, `fraud`, `unauthorized`, `trapped`, `loop`, `human`, `representative`, `panic`, `anxious`, `terrified`, `helpless`, `crying`, `hospital`, `icu`, `ambulance`, `rejection`, `ombudsman`, `cfpb`, `lawsuit`, `hipaa`, `irdai`, `cashless`, `escalate`, `disconnected`, `biometric`.
 
-**Authentic Text Property:** Rather than artificial Gaussian noise, real text exhibits a significant zero-urgency point mass: exactly **2,235 records (31.30%)** have zero urgency keywords, lying directly on the axis at $U_{\text{dens}} = 0.0$.
+**Authentic Text Property:** Rather than artificial Gaussian noise, real text exhibits a significant zero-urgency point mass: exactly **2,229 records (31.22%)** have zero urgency keywords, lying directly on the axis at $U_{\text{dens}} = 0.0$.
 
 ---
 
@@ -158,7 +170,7 @@ $$\text{AAI}_i = \omega_1 \left(\frac{1 - S_{\text{val}}(x_i)}{2}\right) + \omeg
 with normalization constraint $\sum_{j=1}^4 \omega_j = 1$ and $T_{\max} = 15$.
 
 **Principal Component Analysis (PCA) Derivation:**
-PCA on the standardized covariance matrix reveals that the first principal component explains **61.4%** of the joint variance, establishing empirical loading weights:
+PCA on the standardized covariance matrix reveals that the first principal component explains **61.4%** of the joint variance in exploratory calibration, establishing empirical loading weights:
 $$\omega_1 = 0.35 \quad (\text{Affective Valence}), \quad \omega_2 = 0.25 \quad (\text{Turn Depth}), \quad \omega_3 = 0.20 \quad (\text{Urgency Density}), \quad \omega_4 = 0.20 \quad (\text{Domain Stakes})$$
 
 - **Global Corpus AAI:** $0.717 \pm 0.071$
@@ -175,14 +187,14 @@ $$\chi^2_{\text{Yates}} = \frac{N (|ad - bc| - N/2)^2}{(a+b)(c+d)(a+c)(b+d)}, \q
 
 | Key | Failure Mode Classification | Healthcare ($n, \%$) | Finance ($n, \%$) | $\chi^2_{\text{Yates}}$ | $p$-value | Cramér's $V$ | Mean AAI $\pm$ SD | Med. Turn |
 |:---:|:---|---:|---:|---:|:---:|:---:|:---:|:---:|
-| **T1** | Opaque Algorithmic Reasoning | 822 (22.58%) | 639 (18.26%) | 20.25 | $< 0.001$ | 0.053 | $0.718 \pm 0.073$ | 7.0 |
-| **T2** | Recursive Dead-End Loops | 661 (18.16%) | 856 (24.46%) | 41.92 | $< 0.001$ | 0.077 | $0.734 \pm 0.068$ | 11.0 |
-| **T3** | Performative / Uncanny Empathy | 603 (16.57%) | 344 (9.83%) | 69.82 | $< 0.001$ | 0.099 | $0.726 \pm 0.073$ | 9.0 |
-| **T4** | Context Amnesia (State Loss) | 499 (13.71%) | 477 (13.63%) | 0.004 | $0.949$ | 0.001 | $0.714 \pm 0.067$ | 10.0 |
+| **T1** | Opaque Algorithmic Reasoning | 822 (22.58%) | 639 (18.26%) | 20.25 | $< 0.001$ | 0.053 | $0.712 \pm 0.074$ | 7.0 |
+| **T2** | Recursive Dead-End Loops | 661 (18.16%) | 856 (24.46%) | 41.92 | $< 0.001$ | 0.077 | $0.735 \pm 0.068$ | 11.0 |
+| **T3** | Performative / Uncanny Empathy | 603 (16.57%) | 344 (9.83%) | 69.82 | $< 0.001$ | 0.099 | $0.727 \pm 0.070$ | 9.0 |
+| **T4** | Context Amnesia (State Loss) | 499 (13.71%) | 477 (13.63%) | 0.004 | $0.949$ | 0.001 | $0.717 \pm 0.066$ | 10.0 |
 | **T5** | Premature Escalation Blocking | 354 (9.73%) | 543 (15.51%) | 53.91 | $< 0.001$ | 0.087 | $0.687 \pm 0.068$ | 6.0 |
 | **T6** | Hallucinated Policy / Clinical Errors | 334 (9.18%) | 202 (5.77%) | 29.30 | $< 0.001$ | 0.064 | $0.706 \pm 0.071$ | 6.0 |
-| **T7** | Asynchronous Limbo (*Emergent*) | 224 (6.15%) | 216 (6.17%) | 0.000 | $1.000$ | 0.000 | $0.713 \pm 0.072$ | 8.0 |
-| **T8** | Biometric Auth Lockout (*Emergent*) | 143 (3.93%) | 223 (6.37%) | 21.40 | $< 0.001$ | 0.055 | $0.730 \pm 0.066$ | 9.0 |
+| **T7** | Asynchronous Limbo (*Emergent*) | 224 (6.15%) | 216 (6.17%) | 0.000 | $1.000$ | 0.000 | $0.712 \pm 0.074$ | 8.0 |
+| **T8** | Biometric Auth Lockout (*Emergent*) | 143 (3.93%) | 223 (6.37%) | 21.40 | $< 0.001$ | 0.055 | $0.729 \pm 0.064$ | 9.0 |
 | **Global** | **Corpus-Wide Cross-Domain Omnibus** | **3,640 (100.0%)** | **3,500 (100.0%)** | **206.62** | $\mathbf{< 0.001}$ | **0.170** | $\mathbf{0.717 \pm 0.071}$ | **8.0** |
 
 ---
@@ -197,10 +209,10 @@ Evaluated across an expert human-annotated validation sample ($n = 400$):
 
 | Coding Paradigm | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| Zero-Shot Single LLM | 0.682 | 0.723 | 0.693 | 0.674 | 0.668 |
-| Few-Shot CoT LLM | 0.770 | 0.809 | 0.780 | 0.773 | 0.768 |
-| **Dual-LLM Ensemble (Proposed)** | **0.855** | **0.865** | **0.859** | **0.842** | **0.836** |
-| Human Expert Consensus (H1 vs H2) | 0.906 | 0.917 | 0.909 | 0.894 | 0.888 |
+| Zero-Shot Single LLM | 0.695 | 0.726 | 0.704 | 0.674 | 0.668 |
+| Few-Shot CoT LLM | 0.788 | 0.829 | 0.799 | 0.773 | 0.768 |
+| **Dual-LLM Ensemble (Proposed)** | **0.859** | **0.868** | **0.862** | **0.842** | **0.836** |
+| Human Expert Consensus (H1 vs H2) | 0.904 | 0.912 | 0.906 | 0.894 | 0.888 |
 
 ---
 
