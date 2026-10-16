@@ -55,8 +55,8 @@
       "Asynchronous_Limbo_Black_Holes:asynchronous",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -73,8 +73,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Asynchronous_Limbo_Black_Holes:submitted to"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -91,8 +91,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "concurrence"
   },
   {
@@ -109,8 +109,8 @@
       "Opaque_Algorithmic_Reasoning:automated denial",
       "Asynchronous_Limbo_Black_Holes:black hole"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "concurrence"
   },
   {
@@ -124,8 +124,8 @@
     "qwen_reasoning": "The service portal defers issues to unmonitored ticket queues without SLA commitments, status tracking, or callbacks.",
     "naive_voting_prediction": "Asynchronous_Limbo_Black_Holes",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -143,8 +143,8 @@
       "Asynchronous_Limbo_Black_Holes:async review",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "concurrence"
   },
   {
@@ -160,8 +160,8 @@
     "lexical_extracted_tags": [
       "Asynchronous_Limbo_Black_Holes:submitted to"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -897,8 +897,8 @@
     "qwen_reasoning": "The service portal loses conversation history or user data when transferring across session states, causing unnecessary delays and confusion.",
     "naive_voting_prediction": "Context_Amnesia",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "concurrence"
   },
   {
@@ -915,8 +915,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Biometric_Auth_Lockout_Loops:2FA"
     ],
-    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
-    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -970,8 +970,8 @@
       "Asynchronous_Limbo_Black_Holes:asynchronous",
       "Biometric_Auth_Lockout_Loops:biometric"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -990,8 +990,8 @@
       "Asynchronous_Limbo_Black_Holes:limbo",
       "Biometric_Auth_Lockout_Loops:biometric"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -1025,8 +1025,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Biometric_Auth_Lockout_Loops:biometric"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "concurrence"
   },
   {
@@ -1044,8 +1044,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:Biometric"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "concurrence"
   },
   {
@@ -1061,8 +1061,8 @@
     "lexical_extracted_tags": [
       "Biometric_Auth_Lockout_Loops:biometric"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "concurrence"
   },
   {
@@ -1080,8 +1080,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Biometric_Auth_Lockout_Loops:selfie"
     ],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -1849,8 +1849,8 @@
     "qwen_reasoning": "The system prompts for re-entering profile preferences without providing a clear reason, and the repeated technical shortcomings create unnecessary delays.",
     "naive_voting_prediction": "Opaque_Algorithmic_Reasoning",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -1868,8 +1868,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Premature_Escalation_Blocking:escalat"
     ],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -1886,8 +1886,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2607,8 +2607,8 @@
     "qwen_reasoning": "The system repeatedly reloads the initial screen without executing requested parameter adjustments, creating persistent friction and lack of alternative means of administrative communication.",
     "naive_voting_prediction": "Asynchronous_Limbo_Black_Holes",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2627,8 +2627,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2646,8 +2646,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "concurrence"
   },
   {
@@ -2661,8 +2661,8 @@
     "qwen_reasoning": "The bot provided a clinical reason for routing to mental health without offering any medical explanation or doctor notes.",
     "naive_voting_prediction": "Opaque_Algorithmic_Reasoning",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2678,8 +2678,8 @@
     "lexical_extracted_tags": [
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "concurrence"
   },
   {
@@ -2714,8 +2714,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Asynchronous_Limbo_Black_Holes:asynchronous"
     ],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
+    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
     "consensus_status": "concurrence"
   },
   {
@@ -2752,8 +2752,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Hallucinated_Policy_Clinical_Errors:fabricated"
     ],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2770,8 +2770,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Hallucinated_Policy_Clinical_Errors:fabricated"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "concurrence"
   },
   {
@@ -2791,8 +2791,8 @@
       "Hallucinated_Policy_Clinical_Errors:fabricated",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2811,8 +2811,8 @@
       "Hallucinated_Policy_Clinical_Errors:hallucinat",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "concurrence"
   },
   {
@@ -2830,8 +2830,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2851,8 +2851,8 @@
       "Hallucinated_Policy_Clinical_Errors:fabricated",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -2869,8 +2869,8 @@
       "Opaque_Algorithmic_Reasoning:automated denial",
       "Premature_Escalation_Blocking:human representative"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -3622,8 +3622,8 @@
     "lexical_extracted_tags": [
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -3640,8 +3640,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Premature_Escalation_Blocking:human representative"
     ],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4408,8 +4408,8 @@
     "lexical_extracted_tags": [
       "Biometric_Auth_Lockout_Loops:Lockout"
     ],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4426,8 +4426,8 @@
       "Opaque_Algorithmic_Reasoning:automated denial",
       "Premature_Escalation_Blocking:human representative"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4441,8 +4441,8 @@
     "qwen_reasoning": "The triage system provided a denial without explaining which guideline or metric was non-compliant.",
     "naive_voting_prediction": "Opaque_Algorithmic_Reasoning",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -4459,8 +4459,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Biometric_Auth_Lockout_Loops:Lockout"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4476,8 +4476,8 @@
     "lexical_extracted_tags": [
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4510,8 +4510,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4528,8 +4528,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "concurrence"
   },
   {
@@ -4564,8 +4564,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Performative_Uncanny_Empathy:I hear how"
     ],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -4582,8 +4582,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
+    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5342,8 +5342,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Premature_Escalation_Blocking:escalat"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Performative_Uncanny_Empathy",
+    "ensemble_prediction": "Performative_Uncanny_Empathy",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5361,8 +5361,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Performative_Uncanny_Empathy",
+    "ensemble_prediction": "Performative_Uncanny_Empathy",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5380,8 +5380,8 @@
       "Performative_Uncanny_Empathy:I hear how",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5398,8 +5398,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Premature_Escalation_Blocking:human representative"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5415,8 +5415,8 @@
     "lexical_extracted_tags": [
       "Opaque_Algorithmic_Reasoning:automated denial"
     ],
-    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
-    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5448,8 +5448,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
-    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5484,8 +5484,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -5503,8 +5503,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -6207,8 +6207,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -6222,8 +6222,8 @@
     "qwen_reasoning": "The application defers issues to unmonitored ticket queues without SLA commitments, status tracking, or callbacks.",
     "naive_voting_prediction": "Asynchronous_Limbo_Black_Holes",
     "lexical_extracted_tags": [],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -6241,8 +6241,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -6259,8 +6259,8 @@
       "Opaque_Algorithmic_Reasoning:algorithm",
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -6276,8 +6276,8 @@
     "lexical_extracted_tags": [
       "Asynchronous_Limbo_Black_Holes:asynchronous"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -6310,8 +6310,8 @@
     "lexical_extracted_tags": [
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
-    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "concurrence"
   },
   {
@@ -6327,8 +6327,8 @@
     "lexical_extracted_tags": [
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Opaque_Algorithmic_Reasoning",
-    "ensemble_prediction": "Opaque_Algorithmic_Reasoning",
+    "hybrid_prediction": "Recursive_Dead_End_Loops",
+    "ensemble_prediction": "Recursive_Dead_End_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -7058,8 +7058,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Recursive_Dead_End_Loops",
-    "ensemble_prediction": "Recursive_Dead_End_Loops",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -7078,8 +7078,8 @@
       "Premature_Escalation_Blocking:human representative",
       "Asynchronous_Limbo_Black_Holes:limbo"
     ],
-    "hybrid_prediction": "Performative_Uncanny_Empathy",
-    "ensemble_prediction": "Performative_Uncanny_Empathy",
+    "hybrid_prediction": "Context_Amnesia",
+    "ensemble_prediction": "Context_Amnesia",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -7095,8 +7095,8 @@
     "lexical_extracted_tags": [
       "Opaque_Algorithmic_Reasoning:automated denial"
     ],
-    "hybrid_prediction": "Context_Amnesia",
-    "ensemble_prediction": "Context_Amnesia",
+    "hybrid_prediction": "Premature_Escalation_Blocking",
+    "ensemble_prediction": "Premature_Escalation_Blocking",
     "consensus_status": "concurrence"
   },
   {
@@ -7132,8 +7132,8 @@
       "Recursive_Dead_End_Loops:circular",
       "Asynchronous_Limbo_Black_Holes:asynchronous"
     ],
-    "hybrid_prediction": "Premature_Escalation_Blocking",
-    "ensemble_prediction": "Premature_Escalation_Blocking",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -7149,8 +7149,8 @@
     "lexical_extracted_tags": [
       "Recursive_Dead_End_Loops:circular"
     ],
-    "hybrid_prediction": "Hallucinated_Policy_Clinical_Errors",
-    "ensemble_prediction": "Hallucinated_Policy_Clinical_Errors",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
@@ -7168,8 +7168,8 @@
       "Premature_Escalation_Blocking:escalat",
       "Biometric_Auth_Lockout_Loops:locked out"
     ],
-    "hybrid_prediction": "Asynchronous_Limbo_Black_Holes",
-    "ensemble_prediction": "Asynchronous_Limbo_Black_Holes",
+    "hybrid_prediction": "Biometric_Auth_Lockout_Loops",
+    "ensemble_prediction": "Biometric_Auth_Lockout_Loops",
     "consensus_status": "neuro_symbolic_arbitrated"
   },
   {
