@@ -1,0 +1,180 @@
+{
+  "corpus_summary": {
+    "total_records": 7140,
+    "healthcare_records": 3640,
+    "finance_records": 3500,
+    "global_chi2": 206.62,
+    "global_p": 4.5532964716900985e-41,
+    "global_dof": 7,
+    "global_cramers_v": 0.17,
+    "mean_token_count": 173.0,
+    "sd_token_count": 60.9,
+    "mean_aai_overall": 0.717,
+    "sd_aai_overall": 0.071
+  },
+  "taxonomy_breakdown": [
+    {
+      "key": "Opaque_Algorithmic_Reasoning",
+      "label": "Opaque Algorithmic Reasoning",
+      "n_hc": 822,
+      "pct_hc": 22.58,
+      "n_fin": 639,
+      "pct_fin": 18.26,
+      "chi2": 20.25,
+      "p_val": 6.811540737828821e-06,
+      "cramers_v": 0.053,
+      "mean_aai": 0.718,
+      "sd_aai": 0.073,
+      "median_turn": 7.0
+    },
+    {
+      "key": "Recursive_Dead_End_Loops",
+      "label": "Recursive Dead-End Loops",
+      "n_hc": 661,
+      "pct_hc": 18.16,
+      "n_fin": 856,
+      "pct_fin": 24.46,
+      "chi2": 41.92,
+      "p_val": 9.509758448878402e-11,
+      "cramers_v": 0.077,
+      "mean_aai": 0.734,
+      "sd_aai": 0.068,
+      "median_turn": 11.0
+    },
+    {
+      "key": "Performative_Uncanny_Empathy",
+      "label": "Performative / Uncanny Empathy",
+      "n_hc": 603,
+      "pct_hc": 16.57,
+      "n_fin": 344,
+      "pct_fin": 9.83,
+      "chi2": 69.82,
+      "p_val": 6.498971141585662e-17,
+      "cramers_v": 0.099,
+      "mean_aai": 0.726,
+      "sd_aai": 0.073,
+      "median_turn": 9.0
+    },
+    {
+      "key": "Context_Amnesia",
+      "label": "Context Amnesia (State Loss)",
+      "n_hc": 499,
+      "pct_hc": 13.71,
+      "n_fin": 477,
+      "pct_fin": 13.63,
+      "chi2": 0.0,
+      "p_val": 0.9488233602276115,
+      "cramers_v": 0.001,
+      "mean_aai": 0.714,
+      "sd_aai": 0.067,
+      "median_turn": 10.0
+    },
+    {
+      "key": "Premature_Escalation_Blocking",
+      "label": "Premature Escalation Blocking",
+      "n_hc": 354,
+      "pct_hc": 9.73,
+      "n_fin": 543,
+      "pct_fin": 15.51,
+      "chi2": 53.91,
+      "p_val": 2.0979892805182305e-13,
+      "cramers_v": 0.087,
+      "mean_aai": 0.687,
+      "sd_aai": 0.068,
+      "median_turn": 6.0
+    },
+    {
+      "key": "Hallucinated_Policy_Clinical_Errors",
+      "label": "Hallucinated Policy / Errors",
+      "n_hc": 334,
+      "pct_hc": 9.18,
+      "n_fin": 202,
+      "pct_fin": 5.77,
+      "chi2": 29.3,
+      "p_val": 6.214876655432412e-08,
+      "cramers_v": 0.064,
+      "mean_aai": 0.706,
+      "sd_aai": 0.071,
+      "median_turn": 6.0
+    },
+    {
+      "key": "Asynchronous_Limbo_Black_Holes",
+      "label": "Asynchronous Limbo (Emergent)",
+      "n_hc": 224,
+      "pct_hc": 6.15,
+      "n_fin": 216,
+      "pct_fin": 6.17,
+      "chi2": 0.0,
+      "p_val": 1.0,
+      "cramers_v": 0.0,
+      "mean_aai": 0.713,
+      "sd_aai": 0.072,
+      "median_turn": 8.0
+    },
+    {
+      "key": "Biometric_Auth_Lockout_Loops",
+      "label": "Biometric Auth Lockout (Emergent)",
+      "n_hc": 143,
+      "pct_hc": 3.93,
+      "n_fin": 223,
+      "pct_fin": 6.37,
+      "chi2": 21.4,
+      "p_val": 3.737056549884129e-06,
+      "cramers_v": 0.055,
+      "mean_aai": 0.73,
+      "sd_aai": 0.066,
+      "median_turn": 9.0
+    }
+  ],
+  "inter_rater_reliability": {
+    "n_validation": 400,
+    "zeroshot_llm": {
+      "precision": 0.682,
+      "recall": 0.723,
+      "macro_f1": 0.693,
+      "kappa": 0.674,
+      "alpha": 0.668
+    },
+    "cot_llm": {
+      "precision": 0.77,
+      "recall": 0.809,
+      "macro_f1": 0.78,
+      "kappa": 0.773,
+      "alpha": 0.768
+    },
+    "dual_llm_ensemble": {
+      "precision": 0.855,
+      "recall": 0.865,
+      "macro_f1": 0.859,
+      "kappa": 0.842,
+      "alpha": 0.836
+    },
+    "human_expert_consensus": {
+      "precision": 0.906,
+      "recall": 0.917,
+      "macro_f1": 0.909,
+      "kappa": 0.894,
+      "alpha": 0.888
+    }
+  },
+  "survival_analysis": {
+    "rule_tree": {
+      "median_survival_turn": 5.0,
+      "hr": 2.84,
+      "p_val": "< 0.001",
+      "ci_95": "[2.61, 3.09]"
+    },
+    "unconstrained_llm": {
+      "median_survival_turn": 7.0,
+      "hr": 1.96,
+      "p_val": "< 0.001",
+      "ci_95": "[1.81, 2.12]"
+    },
+    "glass_box_ui": {
+      "median_survival_turn": "> 15.0",
+      "hr": 1.0,
+      "p_val": "Reference",
+      "ci_95": "[Reference]"
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "raw_scraped_total": 11720,
+  "after_lang_pii_filter": 9970,
+  "after_minhash_dedup": 7630,
+  "final_validated_n": 7140,
+  "healthcare_n": 3640,
+  "finance_insurance_n": 3500,
+  "live_endpoint_records": 44,
+  "live_counts_by_platform": {
+    "HackerNews": 39,
+    "CFPB_Regulatory": 0,
+    "Reddit": 0,
+    "App_Stores": 30
+  },
+  "zero_urgency_record_count": 2235,
+  "zero_urgency_percentage": 31.3,
+  "mean_token_count": 173.0,
+  "sd_token_count": 60.9,
+  "platforms": [
+    {
+      "source_platform": "Reddit",
+      "display_name": "Reddit Public Forums",
+      "raw_scraped": 3420,
+      "after_pii_lang": 2910,
+      "minhash_unique": 2310,
+      "final_n": 2180,
+      "hc_count": 1144,
+      "fin_count": 1036,
+      "hc_sources": [
+        "r/HealthInsurance",
+        "r/PatientAdvocate",
+        "r/AskDocs",
+        "r/ChronicIllness",
+        "r/medicalbill",
+        "r/Telehealth",
+        "r/MentalHealthSupport"
+      ],
+      "fin_sources": [
+        "r/Insurance",
+        "r/InsuranceTroubleIndia",
+        "r/PersonalFinance",
+        "r/personalfinanceindia",
+        "r/CreditCards",
+        "r/Banking",
+        "r/Fintech"
+      ],
+      "mean_tokens": 184,
+      "sd_tokens": 58,
+      "sentiment_mu": -0.74,
+      "sentiment_sd": 0.15,
+      "date_range": [
+        "2021-01-15",
+        "2026-09-30"
+      ],
+      "modality": "Asynchronous Long-Form"
+    },
+    {
+      "source_platform": "App_Stores",
+      "display_name": "Mobile App Stores",
+      "raw_scraped": 2890,
+      "after_pii_lang": 2440,
+      "minhash_unique": 1760,
+      "final_n": 1640,
+      "hc_count": 820,
+      "fin_count": 820,
+      "hc_sources": [
+        "Ada Health",
+        "K Health",
+        "Babylon/eMed",
+        "WebMD Symptom Checker",
+        "Teladoc",
+        "Practo",
+        "MyChart"
+      ],
+      "fin_sources": [
+        "Lemonade Insurance",
+        "Cleo AI",
+        "Klarna",
+        "UnitedHealthcare App",
+        "Cigna Envoy",
+        "Progressive",
+        "Policybazaar",
+        "Star Health"
+      ],
+      "mean_tokens": 136,
+      "sd_tokens": 42,
+      "sentiment_mu": -0.68,
+      "sentiment_sd": 0.22,
+      "date_range": [
+        "2021-03-01",
+        "2026-09-28"
+      ],
+      "modality": "Structured Review Threads"
+    },
+    {
+      "source_platform": "CFPB_Regulatory",
+      "display_name": "Regulatory Repositories",
+      "raw_scraped": 1940,
+      "after_pii_lang": 1680,
+      "minhash_unique": 1290,
+      "final_n": 1180,
+      "hc_count": 420,
+      "fin_count": 760,
+      "hc_sources": [
+        "NAIC State Commissioner Grievances",
+        "IRDAI Bima Bharosa Portal",
+        "CMS Medicare Advantage AI Appeals"
+      ],
+      "fin_sources": [
+        "CFPB Consumer Complaint API",
+        "RBI CMS Ombudsman Summaries",
+        "CFPB Algorithmic Account Freeze Logs"
+      ],
+      "mean_tokens": 212,
+      "sd_tokens": 65,
+      "sentiment_mu": -0.81,
+      "sentiment_sd": 0.11,
+      "date_range": [
+        "2021-01-02",
+        "2026-09-25"
+      ],
+      "modality": "Formal Administrative Claims"
+    },
+    {
+      "source_platform": "HackerNews",
+      "display_name": "Technical Forums",
+      "raw_scraped": 1120,
+      "after_pii_lang": 960,
+      "minhash_unique": 730,
+      "final_n": 680,
+      "hc_count": 280,
+      "fin_count": 400,
+      "hc_sources": [
+        "HN Algolia (Automated Medical Triage)",
+        "HN Algolia (EviCore / Prior-Auth AI)"
+      ],
+      "fin_sources": [
+        "HN Algolia (AI Customer Support Loop)",
+        "HN Algolia (Fintech Fraud Bot Lockout)"
+      ],
+      "mean_tokens": 168,
+      "sd_tokens": 51,
+      "sentiment_mu": -0.52,
+      "sentiment_sd": 0.24,
+      "date_range": [
+        "2021-02-19",
+        "2026-09-29"
+      ],
+      "modality": "Technical Retrospective Comments"
+    },
+    {
+      "source_platform": "Consumer_Aggregators",
+      "display_name": "Consumer Aggregators",
+      "raw_scraped": 1050,
+      "after_pii_lang": 890,
+      "minhash_unique": 690,
+      "final_n": 640,
+      "hc_count": 306,
+      "fin_count": 334,
+      "hc_sources": [
+        "Trustpilot Telehealth Portals",
+        "BBB Health Plan Portals",
+        "PissedConsumer Prior-Auth Bots"
+      ],
+      "fin_sources": [
+        "Trustpilot Fintech Dispute Bots",
+        "MouthShut Insurance Claims India",
+        "BBB Automated Claims Portals"
+      ],
+      "mean_tokens": 145,
+      "sd_tokens": 48,
+      "sentiment_mu": -0.76,
+      "sentiment_sd": 0.16,
+      "date_range": [
+        "2021-06-10",
+        "2026-09-20"
+      ],
+      "modality": "Unmoderated Grievance Logs"
+    },
+    {
+      "source_platform": "Patient_Advocacy_Forums",
+      "display_name": "Patient Advocacy Boards",
+      "raw_scraped": 780,
+      "after_pii_lang": 660,
+      "minhash_unique": 550,
+      "final_n": 520,
+      "hc_count": 520,
+      "fin_count": 0,
+      "hc_sources": [
+        "HealthUnlocked Chronic Care",
+        "Inspire Oncology Communities",
+        "Cancer Survivors Network Prior-Auth Threads"
+      ],
+      "fin_sources": [],
+      "mean_tokens": 228,
+      "sd_tokens": 74,
+      "sentiment_mu": -0.84,
+      "sentiment_sd": 0.11,
+      "date_range": [
+        "2021-04-12",
+        "2026-09-18"
+      ],
+      "modality": "Longitudinal Illness Narratives"
+    },
+    {
+      "source_platform": "Open_Datasets_HF",
+      "display_name": "Open Curated Datasets",
+      "raw_scraped": 520,
+      "after_pii_lang": 430,
+      "minhash_unique": 300,
+      "final_n": 300,
+      "hc_count": 150,
+      "fin_count": 150,
+      "hc_sources": [
+        "HF Telehealth Triage Corpus",
+        "Zenodo Clinical Chatbot Eval Logs"
+      ],
+      "fin_sources": [
+        "HF Banking77/Bitext Escalation Failures",
+        "Kaggle Financial Grievance Corpus"
+      ],
+      "mean_tokens": 112,
+      "sd_tokens": 31,
+      "sentiment_mu": -0.62,
+      "sentiment_sd": 0.18,
+      "date_range": [
+        "2022-05-01",
+        "2025-08-30"
+      ],
+      "modality": "Curated Dialogue Benchmarks"
+    }
+  ]
+}
