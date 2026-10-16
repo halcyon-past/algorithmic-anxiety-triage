@@ -93,7 +93,7 @@ algorithmic-anxiety-triage/
 ### Environment Setup
 ```bash
 # Clone the repository
-git clone https://github.com/aritro-saha/algorithmic-anxiety-triage.git
+git clone https://github.com/halcyon-past/algorithmic-anxiety-triage.git
 cd algorithmic-anxiety-triage
 
 # Create and activate virtual environment
