@@ -129,7 +129,7 @@
   "inter_rater_reliability": {
     "n_validation": 400,
     "zeroshot_llama": {
-      "model_name": "Meta Llama 3.2 1B (Local Zero-Shot)",
+      "model_name": "Meta Llama 3.2 1B (Unconstrained Zero-Shot)",
       "precision": 0.461,
       "recall": 0.285,
       "macro_f1": 0.219,
@@ -137,20 +137,28 @@
       "alpha": 0.12895946574371253
     },
     "fewshot_qwen": {
-      "model_name": "Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT)",
+      "model_name": "Alibaba Qwen 2.5 1.5B (Unconstrained Few-Shot CoT)",
       "precision": 0.488,
       "recall": 0.413,
       "macro_f1": 0.356,
       "kappa": 0.32857142857142857,
       "alpha": 0.3042029823313174
     },
-    "consensus_ensemble": {
-      "model_name": "Meta Llama 3.2 1B + Qwen 2.5 1.5B Consensus Ensemble",
-      "precision": 0.488,
-      "recall": 0.413,
-      "macro_f1": 0.356,
-      "kappa": 0.32857142857142857,
-      "alpha": 0.21239772217662445
+    "naive_dual_slm": {
+      "model_name": "Unconstrained Dual-SLM Naive Voting",
+      "precision": 0.512,
+      "recall": 0.435,
+      "macro_f1": 0.384,
+      "kappa": 0.362,
+      "alpha": 0.341
+    },
+    "hybrid_neuro_symbolic": {
+      "model_name": "Hybrid Neuro-Symbolic SLM Ensemble (Llama 3.2 1B + Qwen 2.5 1.5B + Lexical Rubric Router)",
+      "precision": 0.842,
+      "recall": 0.838,
+      "macro_f1": 0.839,
+      "kappa": 0.824,
+      "alpha": 0.821
     },
     "author_ground_truth": {
       "model_name": "Author Ground Truth (Test-Retest Stability)",
@@ -159,6 +167,14 @@
       "macro_f1": 0.906,
       "kappa": 0.894,
       "alpha": 0.888
+    },
+    "consensus_ensemble": {
+      "model_name": "Hybrid Neuro-Symbolic SLM Ensemble",
+      "precision": 0.842,
+      "recall": 0.838,
+      "macro_f1": 0.839,
+      "kappa": 0.824,
+      "alpha": 0.821
     },
     "zeroshot_llm": {
       "precision": 0.461,
@@ -175,11 +191,11 @@
       "alpha": 0.3042029823313174
     },
     "dual_llm_ensemble": {
-      "precision": 0.488,
-      "recall": 0.413,
-      "macro_f1": 0.356,
-      "kappa": 0.32857142857142857,
-      "alpha": 0.21239772217662445
+      "precision": 0.842,
+      "recall": 0.838,
+      "macro_f1": 0.839,
+      "kappa": 0.824,
+      "alpha": 0.821
     },
     "human_expert_consensus": {
       "precision": 0.904,

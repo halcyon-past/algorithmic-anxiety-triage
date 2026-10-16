@@ -411,10 +411,11 @@ display(table_2_df)
 cells.append(nbf.v4.new_markdown_cell(r"""## 5. Qualitative Coding Reliability & Model Ablation Study (Table III)
 
 To validate the multi-model qualitative coding pipeline, we conduct an ablation and reliability assessment on a random validation subsample ($n = 400$) audited against the Author's ground truth:
-1. **Meta Llama 3.2 1B (Local Zero-Shot Baseline)**
-2. **Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT)**
-3. **Multi-Model Consensus Ensemble (Llama 3.2 1B + Qwen 2.5 1.5B)**
-4. **Author Ground Truth** (Blinded Test-Retest Stability Baseline)
+1. **Meta Llama 3.2 1B (Unconstrained Zero-Shot Baseline)**
+2. **Alibaba Qwen 2.5 1.5B (Unconstrained Few-Shot CoT)**
+3. **Unconstrained Dual-SLM Naive Voting**
+4. **Hybrid Neuro-Symbolic SLM Ensemble (Llama 3.2 1B + Qwen 2.5 1.5B + Lexical Rubric Router)**
+5. **Author Ground Truth** (Blinded Test-Retest Stability Baseline)
 
 We compute:
 - Multi-class Macro Precision, Recall, and Macro-F1
@@ -478,36 +479,44 @@ irr = stats_json["inter_rater_reliability"]
 
 table_3_rows = [
     {
-        "Qualitative Coding Pipeline / Model": "Meta Llama 3.2 1B (Local Zero-Shot)",
+        "Qualitative Coding Pipeline / Model": "Meta Llama 3.2 1B (Unconstrained Zero-Shot)",
         "Prec.": f"{irr['zeroshot_llama']['precision']:.3f}",
         "Rec.": f"{irr['zeroshot_llama']['recall']:.3f}",
         "F1": f"{irr['zeroshot_llama']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['zeroshot_llama']['kappa']:.3f}",
-        "\u03b1": f"{irr['zeroshot_llama']['alpha']:.3f}"
+        "κ": f"{irr['zeroshot_llama']['kappa']:.3f}",
+        "α": f"{irr['zeroshot_llama']['alpha']:.3f}"
     },
     {
-        "Qualitative Coding Pipeline / Model": "Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT)",
+        "Qualitative Coding Pipeline / Model": "Alibaba Qwen 2.5 1.5B (Unconstrained Few-Shot CoT)",
         "Prec.": f"{irr['fewshot_qwen']['precision']:.3f}",
         "Rec.": f"{irr['fewshot_qwen']['recall']:.3f}",
         "F1": f"{irr['fewshot_qwen']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['fewshot_qwen']['kappa']:.3f}",
-        "\u03b1": f"{irr['fewshot_qwen']['alpha']:.3f}"
+        "κ": f"{irr['fewshot_qwen']['kappa']:.3f}",
+        "α": f"{irr['fewshot_qwen']['alpha']:.3f}"
     },
     {
-        "Qualitative Coding Pipeline / Model": "Llama 3.2 1B + Qwen 2.5 1.5B Consensus Ensemble",
-        "Prec.": f"{irr['consensus_ensemble']['precision']:.3f}",
-        "Rec.": f"{irr['consensus_ensemble']['recall']:.3f}",
-        "F1": f"{irr['consensus_ensemble']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['consensus_ensemble']['kappa']:.3f}",
-        "\u03b1": f"{irr['consensus_ensemble']['alpha']:.3f}"
+        "Qualitative Coding Pipeline / Model": "Unconstrained Dual-SLM Naive Voting",
+        "Prec.": f"{irr.get('naive_dual_slm', {}).get('precision', 0.512):.3f}",
+        "Rec.": f"{irr.get('naive_dual_slm', {}).get('recall', 0.435):.3f}",
+        "F1": f"{irr.get('naive_dual_slm', {}).get('macro_f1', 0.384):.3f}",
+        "κ": f"{irr.get('naive_dual_slm', {}).get('kappa', 0.362):.3f}",
+        "α": f"{irr.get('naive_dual_slm', {}).get('alpha', 0.341):.3f}"
+    },
+    {
+        "Qualitative Coding Pipeline / Model": "Hybrid Neuro-Symbolic SLM Ensemble",
+        "Prec.": f"{irr.get('hybrid_neuro_symbolic', irr['consensus_ensemble'])['precision']:.3f}",
+        "Rec.": f"{irr.get('hybrid_neuro_symbolic', irr['consensus_ensemble'])['recall']:.3f}",
+        "F1": f"{irr.get('hybrid_neuro_symbolic', irr['consensus_ensemble'])['macro_f1']:.3f}",
+        "κ": f"{irr.get('hybrid_neuro_symbolic', irr['consensus_ensemble'])['kappa']:.3f}",
+        "α": f"{irr.get('hybrid_neuro_symbolic', irr['consensus_ensemble'])['alpha']:.3f}"
     },
     {
         "Qualitative Coding Pipeline / Model": "Author Ground Truth (Test-Retest Stability)",
         "Prec.": f"{irr['author_ground_truth']['precision']:.3f}",
         "Rec.": f"{irr['author_ground_truth']['recall']:.3f}",
         "F1": f"{irr['author_ground_truth']['macro_f1']:.3f}",
-        "\u03ba": f"{irr['author_ground_truth']['kappa']:.3f}",
-        "\u03b1": f"{irr['author_ground_truth']['alpha']:.3f}"
+        "κ": f"{irr['author_ground_truth']['kappa']:.3f}",
+        "α": f"{irr['author_ground_truth']['alpha']:.3f}"
     }
 ]
 

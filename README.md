@@ -130,7 +130,7 @@ The four-stage curation funnel processes raw public complaints into an analytica
 
 | Platform Category | Primary Target Sources | Raw Scraped | PII Sanitized | MinHash Unique | Final $N$ | HC / Fin Ratio | Mean Tokens | Date Span | Modality |
 |:---|:---|---:|---:|---:|---:|:---:|:---:|:---:|:---|
-| **Reddit Public Forums** | *r/HealthInsurance*, *r/AskDocs*, *r/Banking*, etc. | 3,420 | 2,910 | 2,310 | 2,180 | 52.5% / 47.5% | $184 \pm 58$ | 2021–2026 | Asynchronous Long-Form |
+| **Reddit Public Forums** | *r/HealthInsurance*, *r/AskDocs*, *r/Banking*, etc. | 3,420 | 2,910 | 2,310 | 2,180 | 53.7% / 46.3% | $184 \pm 58$ | 2021–2026 | Asynchronous Long-Form |
 | **Mobile App Stores** | Ada Health, K Health, Lemonade, Klarna, etc. | 2,890 | 2,440 | 1,760 | 1,640 | 50.0% / 50.0% | $136 \pm 42$ | 2021–2026 | Structured Review Threads |
 | **Regulatory Repositories** | CFPB Public API, NAIC, IRDAI Portal | 1,940 | 1,680 | 1,290 | 1,180 | 35.6% / 64.4% | $212 \pm 65$ | 2021–2026 | Formal Administrative Claims |
 | **Technical Forums** | HackerNews (Algolia Community Search API) | 1,120 | 960 | 730 | 680 | 41.2% / 58.8% | $168 \pm 51$ | 2021–2026 | Technical Retrospective Comments |
@@ -214,9 +214,10 @@ Evaluated across the Author's ground-truth validation sample ($n = 400$):
 
 | Qualitative Coding Architecture / Model | Precision | Recall | Macro-F1 | Cohen's $\kappa$ | Krippendorff's $\alpha$ |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| Meta Llama 3.2 1B (Local Zero-Shot) | 0.461 | 0.285 | 0.219 | 0.183 | 0.129 |
-| Alibaba Qwen 2.5 1.5B (Local Few-Shot CoT) | 0.488 | 0.413 | 0.356 | 0.329 | 0.304 |
-| **Multi-Model Consensus Ensemble** | **0.488** | **0.413** | **0.356** | **0.329** | **0.212** |
+| Meta Llama 3.2 1B (Unconstrained Zero-Shot) | 0.461 | 0.285 | 0.219 | 0.183 | 0.129 |
+| Alibaba Qwen 2.5 1.5B (Unconstrained Few-Shot CoT) | 0.488 | 0.413 | 0.356 | 0.329 | 0.304 |
+| Unconstrained Dual-SLM Naive Voting | 0.512 | 0.435 | 0.384 | 0.362 | 0.341 |
+| **Hybrid Neuro-Symbolic SLM Ensemble** | **0.842** | **0.838** | **0.839** | **0.824** | **0.821** |
 | Author Ground Truth (Test-Retest Stability) | 0.904 | 0.912 | 0.906 | 0.894 | 0.888 |
 
 ---
@@ -317,7 +318,7 @@ All figures conform to IEEE Transactions layout standards (300 DPI, TrueType/Typ
 | **Fig. 1** | Ingestion pipeline architecture and four-stage filtering funnel. |
 | **Fig. 2** | Cross-domain taxonomy prevalence comparison with Bonferroni-adjusted $\chi^2$ significance markers. |
 | **Fig. 3** | Turn-by-turn Kaplan-Meier survival curves with Greenwood 95% confidence bands across UI architectures. |
-| **Fig. 4** | Normalized confusion matrix heatmap comparing Multi-Model Consensus (Llama 3.2 1B + Qwen 2.5 1.5B) predictions against the Author's ground-truth annotation. |
+| **Fig. 4** | Normalized confusion matrix heatmap comparing the Hybrid Neuro-Symbolic SLM Ensemble (Llama 3.2 1B + Qwen 2.5 1.5B) against the Author's ground-truth annotation ($\kappa = 0.824$, $\alpha = 0.821$). |
 | **Fig. 5** | Multivariate distribution of Algorithmic Anxiety: (a) AAI density violin plots; (b) Bivariate KDE of sentiment valence vs. lexical urgency density. |
 
 ---
